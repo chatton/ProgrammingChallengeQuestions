@@ -26,8 +26,8 @@ def turn_into_coins(total_cash):
     return values
 
 
-print(turn_into_coins(76))
-print(turn_into_coins(2222))
-print(turn_into_coins(0))
-print(turn_into_coins(623))
-print(turn_into_coins(12))
+print(turn_into_coins(76)) # {50: 1, 20: 1, 5: 1, 1: 1}
+print(turn_into_coins(2222)) # {200: 11, 20: 1, 2: 1}
+print(turn_into_coins(0)) # {}
+print(turn_into_coins(623)) # {200: 3, 20: 1, 2: 1, 1: 1}
+print(turn_into_coins(12)) # {10: 1, 2: 1}
