@@ -8,6 +8,8 @@ findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
 It’s guaranteed that array contains more than 3 numbers.
 
 */
+package kata
+
 func FindUniq(arr []float32) float32 {
   counts := make(map[float32]int)
 
