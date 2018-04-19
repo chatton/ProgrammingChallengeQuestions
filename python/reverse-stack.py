@@ -1,3 +1,7 @@
+# a: int = 10
+# a = "Hello"
+
+
 def reverse(stack):
     if not stack:
         return stack
