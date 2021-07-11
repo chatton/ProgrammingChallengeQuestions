@@ -14,17 +14,18 @@ Complete the function that takes a noun as a string, and returns her preferred b
 */
 
 package kata
+
 import (
-  "strings"
+	"strings"
 )
 
 func bandNameGenerator(word string) string {
 
-  titledRunes := []rune(strings.Title(word))
-  asLower := []rune(strings.ToLower(word))
-  if needsThe :=  asLower[0] != asLower[len(asLower) - 1]; needsThe {
-    return "The " + string(titledRunes)  
-  }
+	titledRunes := []rune(strings.Title(word))
+	asLower := []rune(strings.ToLower(word))
+	if needsThe := asLower[0] != asLower[len(asLower)-1]; needsThe {
+		return "The " + string(titledRunes)
+	}
 
-  return string(titledRunes) + word[1:]
+	return string(titledRunes) + word[1:]
 }

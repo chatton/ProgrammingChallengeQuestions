@@ -11,21 +11,21 @@ It’s guaranteed that array contains more than 3 numbers.
 package kata
 
 func FindUniq(arr []float32) float32 {
-  counts := make(map[float32]int)
+	counts := make(map[float32]int)
 
-  for _, f := range arr {
-    if val, ok := counts[f]; ok {
-      counts[f] = val + 1
-    } else {
-      counts[f] = 1
-    }
-  }
+	for _, f := range arr {
+		if val, ok := counts[f]; ok {
+			counts[f] = val + 1
+		} else {
+			counts[f] = 1
+		}
+	}
 
-  for _, f := range arr {
-    if val, _ := counts[f]; val == 1 {
-        return f
-    }
-  }
-  
-  return -1 // should never get here
+	for _, f := range arr {
+		if val, _ := counts[f]; val == 1 {
+			return f
+		}
+	}
+
+	return -1 // should never get here
 }

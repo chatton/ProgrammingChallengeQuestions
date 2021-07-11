@@ -5,6 +5,6 @@ It's pretty straightforward. Your goal is to create a function that removes the 
 package kata
 
 func RemoveChar(word string) string {
-  runes := []rune(word)
-  return string(runes[1: len(runes) - 1])
+	runes := []rune(word)
+	return string(runes[1 : len(runes)-1])
 }
