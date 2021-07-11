@@ -14,7 +14,7 @@ Empty list is considered to have zero greatest sum. Note that the empty list or 
 
 import java.util.stream.*;
 
-public class Max {
+public class MaxSubarraySum {
     public static int sequence(int[] arr) {
         // empty array is sum of zero or no positive values should be a sum of 0
         if (arr.length == 0 || IntStream.of(arr).allMatch(i -> i <= 0)) {

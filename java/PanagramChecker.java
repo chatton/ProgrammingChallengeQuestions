@@ -9,21 +9,20 @@ Given a string, detect whether or not it is a pangram. Return True if it is, Fal
 
 import java.util.*;
 
-public class PangramChecker {
-  public boolean check(String sentence){
-    sentence = sentence.toLowerCase();
-    Set<Character> alpha = new HashSet();
-    Set<Character> seen = new HashSet();
-    for(Character c : "abcdefghijklmnopqrstuvwxyz".toCharArray()){
-      alpha.add(c);
+public class PanagramChecker {
+    public boolean check(String sentence) {
+        sentence = sentence.toLowerCase();
+        Set<Character> alpha = new HashSet();
+        Set<Character> seen = new HashSet();
+        for (Character c : "abcdefghijklmnopqrstuvwxyz".toCharArray()) {
+            alpha.add(c);
+        }
+
+        for (Character c : sentence.toCharArray()) {
+            if (alpha.contains(c)) {
+                seen.add(c);
+            }
+        }
+        return seen.size() == 26;
     }
-    
-    for(Character c : sentence.toCharArray()){
-      if(alpha.contains(c)){
-        seen.add(c);
-      }
-    }
-    return seen.size() == 26;
-  }
-  
 }

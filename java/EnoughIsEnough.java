@@ -16,7 +16,6 @@ EnoughIsEnough.deleteNth(new int[] {1,1,3,3,7,2,2,2,2}, 3) // return [1, 1, 3, 3
 import java.util.*;
 
 public class EnoughIsEnough {
-
     public static int[] deleteNth(int[] elements, int maxOccurrences) {
         final Map<Integer, Integer> counts = new HashMap<>();
         final List<Integer> result = new ArrayList<>();
@@ -31,5 +30,4 @@ public class EnoughIsEnough {
 
         return result.stream().mapToInt(i -> i).toArray();
     }
-
 }

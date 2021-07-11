@@ -3,7 +3,7 @@ import java.io.*;
 
 // CoderByte challenge
 
-class Main {
+class LetterChanges {
 
     public static boolean isVowel(char c) {
         return "aeiou".indexOf(c) >= 0;

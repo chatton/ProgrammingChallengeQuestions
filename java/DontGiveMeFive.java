@@ -16,12 +16,12 @@ The start number will always be smaller than the end number. Both numbers can be
 
 import java.util.stream.IntStream;
 
-public class Kata {
+public class DontGiveMeFive {
     public static int dontGiveMeFive(int start, int end) {
         return (int) IntStream.range(start, end + 1)
-        .boxed()
-        .map(i -> "" + i)
-        .filter(s -> !s.contains("5"))
-        .count();
+                .boxed()
+                .map(i -> "" + i)
+                .filter(s -> !s.contains("5"))
+                .count();
     }
 }

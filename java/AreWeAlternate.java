@@ -16,7 +16,7 @@ Arguments consist of only lowercase letters.
 
 import java.util.*;
 
-public class Solution {
+public class AreWeAlternate {
     public static boolean isAlt(String word) {
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         char[] vowelsArr = "aeiou".toCharArray();

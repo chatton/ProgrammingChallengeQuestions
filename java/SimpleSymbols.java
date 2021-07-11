@@ -1,9 +1,5 @@
-import java.util.*;
-import java.io.*;
-
-class Main {
+class SimpleSymbols {
     public static String SimpleSymbols(String str) {
-
         for (int i = 0; i < str.length(); i++) {
             char letter = str.charAt(i);
             if (Character.isLetter(letter)) {
@@ -18,7 +14,5 @@ class Main {
             }
         }
         return "true";
-
     }
-
 }

@@ -1,7 +1,6 @@
 import java.util.*;
-import java.io.*;
 
-class Main {
+class Kaprekars {
 
     private static char[] reversed(char[] arr) {
         char[] newArr = new char[arr.length];
@@ -47,11 +46,4 @@ class Main {
         return count;
 
     }
-
-    public static void main(String[] args) {
-        // keep this function call here     
-        Scanner s = new Scanner(System.in);
-        System.out.print(KaprekarsConstant(s.nextLine()));
-    }
-
 }

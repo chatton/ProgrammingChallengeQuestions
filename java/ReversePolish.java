@@ -16,46 +16,47 @@ You may assume that there won't be exceptional situations (like stack underflow 
 */
 
 import java.util.*;
-public class Calc {
 
-  public double evaluate(String expr) {
-     if(expr.equals("")){
-       return 0;
-     }
-     
-    Stack<String> stack = new Stack();
-    String[] tokens = expr.split(" ");
-    for(String token : tokens){
-      switch(token){
-        case "+":{
-          
-          float token1 = Float.parseFloat(stack.pop());
-          float token2 = Float.parseFloat(stack.pop());
-          stack.push("" + (token1 + token2));
-          break;
-          }
-        case "-": {
-          float token1 = Float.parseFloat(stack.pop());
-          float token2 = Float.parseFloat(stack.pop());
-          stack.push("" + (token2 - token1));
-          break;
-          }
-        case "*": {
-          float token1 = Float.parseFloat(stack.pop());
-          float token2 = Float.parseFloat(stack.pop());
-          stack.push("" + (token1 * token2));
-          break;
-          }
-        case "/":{
-          float token1 = Float.parseFloat(stack.pop());
-          float token2 = Float.parseFloat(stack.pop());
-          stack.push("" + (token2 / token1));
-          break;
-          }
-        default:
-          stack.push(token);
-      }
+public class ReversePolish {
+
+    public double evaluate(String expr) {
+        if (expr.equals("")) {
+            return 0;
+        }
+
+        Stack<String> stack = new Stack();
+        String[] tokens = expr.split(" ");
+        for (String token : tokens) {
+            switch (token) {
+                case "+": {
+
+                    float token1 = Float.parseFloat(stack.pop());
+                    float token2 = Float.parseFloat(stack.pop());
+                    stack.push("" + (token1 + token2));
+                    break;
+                }
+                case "-": {
+                    float token1 = Float.parseFloat(stack.pop());
+                    float token2 = Float.parseFloat(stack.pop());
+                    stack.push("" + (token2 - token1));
+                    break;
+                }
+                case "*": {
+                    float token1 = Float.parseFloat(stack.pop());
+                    float token2 = Float.parseFloat(stack.pop());
+                    stack.push("" + (token1 * token2));
+                    break;
+                }
+                case "/": {
+                    float token1 = Float.parseFloat(stack.pop());
+                    float token2 = Float.parseFloat(stack.pop());
+                    stack.push("" + (token2 / token1));
+                    break;
+                }
+                default:
+                    stack.push(token);
+            }
+        }
+        return Float.parseFloat(stack.pop());
     }
-    return Float.parseFloat(stack.pop());
-  }
 }

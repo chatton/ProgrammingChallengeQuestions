@@ -18,7 +18,7 @@ You may consider that there will not be any empty arrays/vectors.
 
 import java.util.*;
 
-public class Kata {
+public class MinAndMax {
 
     public int min(int[] list) {
         return Arrays.stream(list).min().orElse(Integer.MAX_VALUE);
